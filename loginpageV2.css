@@ -238,13 +238,13 @@
     height: 100%;
     overflow: hidden;
     transition: all 0.6s ease-in-out;
-    border-radius: 150px 0 0 150px;
+    border-radius: 100px 0 0 100px;
     z-index: 1000;
   }
   
   .container.active .toogle-container {
     transform: translateX(-100%);
-    border-radius: 0 150px 150px 0;
+    border-radius: 0 100px 100px 0;
   }
   
   .toogle {
