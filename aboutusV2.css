@@ -305,5 +305,161 @@ input{
 }
 
 
+.container{
+  position: absolute;
+  left: 15%;
+  top: 150px;
+  width: 75%;
+  height: 700px;
+  border-radius: 50px;
+
+}
+
+
+/*aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa*/
+
+.card-container{
+  position: absolute;
+  width: 70%;
+  height: 500px;
+  bottom: 50px;
+  left: 5%;
+}
+
+.card {
+  margin-top: 10px;
+  width: 100%;
+  height: 100%;
+  border-radius: 25px;
+  border-color: #9632fe solid 5px;
+  text-align: center;
+  overflow: hidden;
+  padding-bottom: 20px;
+  position: relative;
+}
+
+
+.description {
+text-align: left;
+position: absolute;
+height:500px;
+background-color:#ffffff9d;
+padding-left: 50px;
+padding-right: 50px;
+border-radius: 15px;
+}
+
+.description h3 {
+font-size: 3rem;
+font-weight: bold;
+color: #4a4a9f;
+margin-top: 25px;
+padding-bottom: 30px;
+text-align: center;
+margin-left: 20px;
+}
+
+.description p {
+text-align: justify;
+font-size: 1.5rem;
+line-height: 1.2;
+color: #000000;
+margin-top: -40px;
+margin-bottom: 55px;
+}
+
+/* aaaaaaaaaaaaaaaaaaaaaaa*/
+
+
+.header {
+position: absolute;
+top: -150px;
+left: 40px;
+display: flex;
+align-items: center;
+justify-content: center;
+text-align: center;
+gap: 50px;
+width: 1250px;
+}
+
+.logo{
+width: 225px;
+height: 17  5px;
+border-radius: 49%;
+background: linear-gradient(90deg, #d8e5f7, #9ca5bf ,#dddddd);
+border: 15px solid white;
+z-index: 1;
+filter: drop-shadow( 0px 5px 5px #a149d44e);
+}
+
+.logo img {
+margin: 10px;
+margin-top: 15px;
+width: 200px;
+height: 200px;
+border-radius: 50%;
+z-index: 1;
+
+}
+
+.header-text{
+margin-left: -100px;
+margin-bottom:75px ;
+}
+
+.header-text h1 {
+font-size: 2.5rem;
+font-weight: bold;
+margin: 0;
+color: black;
+}
+
+.header-text h2 {
+font-size: 1.5rem;
+color: black;
+margin: 0;
+}
+
+/*aaaaaaaaaaaaaaaaaaaaaaaaaa*/
+
+.contactus{
+position: absolute;
+top: 4%;
+width: 50%;
+height: 500px;
+background-color:#ffffff9d;
+left: 101%;
+border-radius: 25px;
+color: white;
+}
+
+.contactus h1{
+font-weight: bold;
+color: #462284;
+text-align: center;
+}
+
+.contactus p{
+font-weight: normal;
+color: #3b1b74;
+margin-left: 10%;
+margin-right: 10%;
+font-size: 18px;
+margin-top: 0px;
+margin-bottom: -10px;
+}
+
+.contactus h3{
+color: #682fff;
+font-weight: lighter;
+border: #682fff 2px solid;
+border-radius: 20px;
+margin-left: 10%;
+margin-right: 10%;
+padding: 5px;
+padding-left: 15px;
+}
+
 
 
