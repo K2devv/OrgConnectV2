@@ -1,0 +1,247 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+/* Reset */
+body {
+    margin: 0;
+    background-image: url(images/newbg.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: right top;
+}
+
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    
+}
+
+/* Logo Section */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    height: 70px;
+    margin-left: 50px;
+}
+
+
+/* Buttons */
+.nav-buttons {
+    display: flex;
+    gap: 15px;
+    margin-left: 550px;
+    
+}
+
+.btn {
+    border: 2px solid #8c4cfb;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 10px 30px;
+    font-size: .8rem;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    background: transparent;
+    width: 250px;
+    margin-left: 10px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.7rem;
+    
+
+}
+
+.list-orgs {
+    color: black;
+}
+    
+
+.newsfeed {
+    background: linear-gradient(to right, #832eff, #fe4ff2);
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+
+
+.search-bar input {
+    border: none;
+    outline: none;
+    font-size: 1em;
+}
+
+.search-icon {
+    border: none;
+    background: none;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+/* Icons */
+.nav-links {
+    display: flex;
+    gap: 1.5rem;
+    margin-right: 50px;
+}
+
+.icon-btn {
+    background-color: #682fff;
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.logout-icon {
+    background-color: #f65555;
+}
+
+.nav-links .icon-btn:hover {
+    background-color: #ffbd59;
+    transform: scale(1.1);
+    box-shadow: 0px 4px 20px #a149d4;
+}
+
+.nav-links .logout-icon:hover {
+    background-color: #f65555;
+    transform: scale(1.1);
+    box-shadow: 0px 4px 20px #a149d4;
+}
+
+.theme-toggle {
+    background: linear-gradient(to right, #ffcd85, #ff9d2f);
+    border-radius: 50%;
+    padding: 5px;
+    color: white;
+}
+
+
+.flex-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
+    top: auto;
+    left: auto;
+    right: auto;
+    gap: 25px;
+    justify-content:space-evenly;
+    width: calc(100%-100px);
+    box-sizing: border-box;
+}
+
+.shadow-box {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, #a159ff, #3b1b74);
+  border-radius: 20px;
+  position: absolute;
+  transition: transform 0.5s ease-in-out, box-shadow 0.3s ease;
+  opacity: 75%;
+  z-index: 0;
+}
+
+.card-container{
+  position: relative;
+  width: 300px;
+  height: 400px;
+}
+
+.card-container:hover .shadow-box{
+transform: rotate(10deg);
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  border-radius: 15px;
+  border-color: #9632fe solid 5px;
+  text-align: center;
+  overflow: hidden;
+  padding-bottom: 20px;
+  position: relative;
+}
+
+
+.card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  padding: 15px;
+}
+.logo-container {
+  width: 150px;
+  height: 150px;
+  background: linear-gradient(90deg, #d8e5f7, #9ca5bf ,#dddddd);
+  border-radius: 50%;
+  border: 15px solid #ffffff;
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  filter: drop-shadow( 0px 5px 5px #a149d44e);
+}
+.logo-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+
+.content {
+  padding-top: 15%;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-bottom: 5% ;
+}
+.title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #3f2c7f;
+  margin-top: 10px;
+  font-weight: 2000;
+}
+.description {
+  font-size: 14px;
+  color: #555;
+  margin: 5px 20px 20px 20px;
+}
+.button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background: linear-gradient(90deg,#a159ff ,#672cff);
+  color: white;
+  text-decoration: none;
+  border-radius: 20px;
+  font-weight: bold;
+  transition: all 0.3s;
+}
+.button:hover {
+  transform: scale(1.5, 1.5);
+}
