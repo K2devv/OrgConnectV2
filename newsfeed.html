@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Org Connect Navbar</title>
+    <title>Dashboard</title>
     <link rel="stylesheet" href="newsfeed.css">
     <link
     rel="stylesheet"
@@ -23,14 +23,21 @@
   <link href="https://fonts.cdnfonts.com/css/dm-sans" rel="stylesheet">
 </head>
 <body>
+
+  
     <nav class="navbar">
         <div class="logo">
             <img src="images/longlogo.png" alt="Org Connect Logo">
         </div>
+
+          
+
+
         <div class="nav-buttons">
-            <button class="btn list-orgs">
+
+            <button class="btn list-orgs" onclick="window.location.href='listOrgs.html'">
                 <i class="fa-solid fa-house"></i>LIST OF ORGS</button>
-            <button class="btn newsfeed">
+            <button class="btn newsfeed" onclick="window.location.href='newsfeed.html'">
                 <i class="fa-solid fa-house"></i>NEWSFEED</button>
         </div>
         
@@ -39,25 +46,384 @@
         
         <div class="nav-links">
   
-            <button class="icon-btn home-icon">
+            <button class="icon-btn home-icon" onclick="window.location.href='landingpage.html'">
                 <i class="fa-solid fa-house" style="color: #ffffff;"></i>
             </button>
-            <button class="icon-btn user-icon">
+            <button class="icon-btn user-icon" onclick="window.location.href='profile.html'">
                 <i class="fa-solid fa-user" style="color: #ffffff;"></i>
             </button>
-            <button class="icon-btn follow-icon">
+            <button class="icon-btn follow-icon" onclick="window.location.href='follow.html'">
                 <i class="fa-solid fa-heart" style="color: #ffffff;"></i>
             </button>
-            <button class="icon-btn notif-icon">
-                <i class="fa-solid fa-bell" style="color: #ffffff;"></i>
+
+            <div class="notification-container">
+        <button class="icon-btn notif-icon" id="notif-btn">
+            <i class="fa-solid fa-bell" style="color: #ffffff;"></i>
+        </button>
+        <div class="notification-popup" id="notif-popup">
+            <div class="popup-header">
+              <i class="fa fa-calendar"></i>
+                <h3>WEEKLY EVENTS</h3>
+            </div>
+            <div class="popup-content">
+
+                <div class="notif-item" onclick="window.location.href='aboutusV2.html'">
+                    <span class="date">NOV 11</span>
+                    <span class="event">Tech Innovators Conference 2024</span>
+                    <div class="gradient-line"></div>
+                </div>
+                <div class="notif-item">
+                    <span class="date">NOV 12</span>
+                    <span class="event">Sustainability Workshop for Students</span>
+                    <div class="gradient-line"></div>
+                </div>
+                <div class="notif-item">
+                    <span class="date">NOV 13</span>
+                    <span class="event">Leadership Development Forum</span>
+                    <div class="gradient-line"></div>
+                </div>
+
+                <div class="notif-item">
+                  <span class="date">NOV 14</span>
+                  <span class="event">Leadership Development Forum</span>
+                  <div class="gradient-line"></div>
+                </div>
+
+              <div class="notif-item">
+                <span class="date">NOV 15</span>
+                <span class="event">Leadership Development Forum</span>
+                <div class="gradient-line"></div>
+              </div>
+
+            </div>
+        </div>
+    </div>
+
+            <input type="checkbox" class="icon-btn darkmode-toggle"  id="darkmode-toggle">
+            <label for="darkmode-toggle">
+                <img src="images/earth-15-svgrepo-com.svg" class="sun" alt="SVG Icon">
+                <img src="images/earth-15-svgrepo-com.svg" class="moon" alt="SVG Icon">
+            </label>
+            
             </button>
-            <button class="icon-btn home-icon">
-                <i class="fa-solid fa-house" style="color: #ffffff;"></i>
-            </button>
-            <button class="icon-btn logout-icon">
+            <button class="icon-btn logout-icon" onclick="window.location.href='landingpage.html'">
                 <i class="fa-solid fa-arrow-right-from-bracket" style="color: #ffffff;"></i>
             </button>
+
+
+            
+            <article>
+                <div class="newsfeedcont">
+                    <div class="newsfeedcontent">
+            
+                        <div class="posts no-images">
+                            <div class="post-header">
+                              <img src="images/orgs.png" alt="Organization Logo" class="post-logo">
+                              <div class="post-header-text">
+                                <h3 class="post-title">Student Development and Leadership Organization</h3>
+                                <p class="post-time">2w</p>
+                              </div>
+                            </div>
+                            <div class="post-content">
+                              <p>
+                                The Youth Empowerment Summit 2024 was a highly successful event, drawing over 200 students
+                                to participate in a day of leadership development and technology innovation. The summit
+                                provided students with the opportunity to enhance their skills and knowledge in a collaborative
+                                and innovative environment.
+                              </p>
+                            </div>
+                          </div>
+            
+            
+            
+            
+            
+                        <div class="posts">
+                            <div class="post-header">
+                                <img src="images/CAS.png" alt="Organization Logo" class="post-logo">
+                                <div class="post-header-text">
+                                  <h3 class="post-title">Student Development and Leadership Organization</h3>
+                                  <p class="post-time">2w</p>
+                                </div>
+                              </div>
+                              <div class="post-content">
+                                <p>
+                                  The Youth Empowerment Summit 2024 was a highly successful event, drawing over 200 students
+                                  to participate in a day of leadership development and technology innovation. The summit
+                                  provided students with opportunity to enhance... <span class="see-more">See more...</span>
+                                </p>
+                              </div>
+                              <div class="post-images">
+                                <img src="images/12.png" alt="Meeting Photo 1" class="post-image">
+                                <img src="images/12.png" alt="Meeting Photo 2" class="post-image">
+                              </div>  
+                        </div>
+            
+            
+            
+            
+                        <div class="posts no-images">
+                            <div class="post-header">
+                              <img src="images/orgs.png" alt="Organization Logo" class="post-logo">
+                              <div class="post-header-text">
+                                <h3 class="post-title">Student Development and Leadership Organization</h3>
+                                <p class="post-time">2w</p>
+                              </div>
+                            </div>
+                            <div class="post-content">
+                              <p>
+                                The Youth Empowerment Summit 2024 was a highly successful event, drawing over 200 students
+                                to participate in a day of leadership development and technology innovation. The summit
+                                provided students with the opportunity to enhance their skills and knowledge in a collaborative
+                                and innovative environment.
+                              </p>
+                            </div>
+                          </div>
+            
+            
+                          <div class="posts no-images">
+                            <div class="post-header">
+                              <img src="images/orgs.png" alt="Organization Logo" class="post-logo">
+                              <div class="post-header-text">
+                                <h3 class="post-title">Student Development and Leadership Organization</h3>
+                                <p class="post-time">2w</p>
+                              </div>
+                            </div>
+                            <div class="post-content">
+                              <p>
+                                The Youth Empowerment Summit 2024 was a highly successful event, drawing over 200 students
+                                to participate in a day of leadership development and technology innovation. The summit
+                                provided students with the opportunity to enhance their skills and knowledge in a collaborative
+                                and innovative environment.
+                              </p>
+                            </div>
+                          </div>
+
+                        <div class="posts">
+                            <div class="post-header">
+                                <img src="images/CAS.png" alt="Organization Logo" class="post-logo">
+                                <div class="post-header-text">
+                                  <h3 class="post-title">Student Development and Leadership Organization</h3>
+                                  <p class="post-time">2w</p>
+                                </div>
+                              </div>
+                              <div class="post-content">
+                                <p>
+                                  The Youth Empowerment Summit 2024 was a highly successful event, drawing over 200 students
+                                  to participate in a day of leadership development and technology innovation. The summit
+                                  provided students with opportunity to enhance... <span class="see-more">See more...</span>
+                                </p>
+                              </div>
+                              <div class="post-images">
+                                <img src="images/12.png" alt="Meeting Photo 1" class="post-image">
+                                <img src="images/12.png" alt="Meeting Photo 2" class="post-image">
+                              </div>  
+                        </div>
+            
+            
+                        <div class="posts no-images">
+                            <div class="post-header">
+                              <img src="images/logo.png" alt="Organization Logo" class="post-logo">
+                              <div class="post-header-text">
+                                <h3 class="post-title">Student Development and Leadership Organization</h3>
+                                <p class="post-time">2w</p>
+                              </div>
+                            </div>
+                            <div class="post-content">
+                              <p>
+                                The Youth Empowerment Summit 2024 was a highly successful event, drawing over 200 students
+                                to participate in a day of leadership development and technology innovation. The summit
+                                provided students with the opportunity to enhance their skills and knowledge in a collaborative
+                                and innovative environment.
+                              </p>
+                            </div>
+                          </div>
+            
+            
+                        <div class="posts">
+                            <div class="post-header">
+                                <img src="images/CAS.png" alt="Organization Logo" class="post-logo">
+                                <div class="post-header-text">
+                                  <h3 class="post-title">Student Development and Leadership Organization</h3>
+                                  <p class="post-time">2w</p>
+                                </div>
+                              </div>
+                              <div class="post-content">
+                                <p>
+                                  The Youth Empowerment Summit 2024 was a highly successful event, drawing over 200 students
+                                  to participate in a day of leadership development and technology innovation. The summit
+                                  provided students with opportunity to enhance... <span class="see-more">See more...</span>
+                                </p>
+                              </div>
+                              <div class="post-images">
+                                <img src="images/12.png" alt="Meeting Photo 1" class="post-image">
+                                <img src="images/12.png" alt="Meeting Photo 2" class="post-image">
+                              </div>  
+                        </div>
+            
+                        <div class="posts">
+                            <div class="post-header">
+                                <img src="images/CAS.png" alt="Organization Logo" class="post-logo">
+                                <div class="post-header-text">
+                                  <h3 class="post-title">Student Development and Leadership Organization</h3>
+                                  <p class="post-time">2w</p>
+                                </div>
+                              </div>
+                              <div class="post-content">
+                                <p>
+                                  The Youth Empowerment Summit 2024 was a highly successful event, drawing over 200 students
+                                  to participate in a day of leadership development and technology innovation. The summit
+                                  provided students with opportunity to enhance... <span class="see-more">See more...</span>
+                                </p>
+                              </div>
+                              <div class="post-images">
+                                <img src="images/12.png" alt="Meeting Photo 1" class="post-image">
+                                <img src="images/12.png" alt="Meeting Photo 2" class="post-image">
+                              </div>  
+                        </div>
+            
+                        <div class="posts">
+                            <div class="post-header">
+                                <img src="images/CAS.png" alt="Organization Logo" class="post-logo">
+                                <div class="post-header-text">
+                                  <h3 class="post-title">Student Development and Leadership Organization</h3>
+                                  <p class="post-time">2w</p>
+                                </div>
+                              </div>
+                              <div class="post-content">
+                                <p>
+                                  The Youth Empowerment Summit 2024 was a highly successful event, drawing over 200 students
+                                  to participate in a day of leadership development and technology innovation. The summit
+                                  provided students with opportunity to enhance... <span class="see-more">See more...</span>
+                                </p>
+                              </div>
+                              <div class="post-images">
+                                <img src="images/12.png" alt="Meeting Photo 1" class="post-image">
+                                <img src="images/12.png" alt="Meeting Photo 2" class="post-image">
+                              </div>  
+                        </div>
+                    
+                    </div>
+                </div>
+            
+                <div class="bulletin">
+                    <div class="bulletin-cont">
+                        <div class="header">
+                          <i class="fa fa-calendar"></i>
+                          WEEKLY EVENTS
+                        </div>
+                        <div class="event-list">
+                          <br>
+            
+                          <div class="event">
+                            <div class="event-date">
+                              <span>Nov</span>
+                              <span>11</span>
+                              <span>2024</span>
+                            </div>
+                            <div class="event-content">
+                              <div class="event-title">Tech Innovators Conference 2024</div>
+                            </div>
+                          </div>
+                          <br>
+            
+                          <div class="event">
+                            <div class="event-date">
+                              <span>Nov</span>
+                              <span>12</span>
+                              <span>2024</span>
+                            </div>
+                            <div class="event-content">
+                              <div class="event-title">Sustainability Workshop for Students</div>
+                            </div>
+                          </div>
+                          <br>
+            
+                          <div class="event">
+                            <div class="event-date">
+                              <span>Nov</span>
+                              <span>13</span>
+                              <span>2024</span>
+                            </div>
+                            <div class="event-content">
+                              <div class="event-title">Leadership Development Forum</div>
+                            </div>
+                          </div>
+                          <br>
+            
+                          <div class="event">
+                            <div class="event-date">
+                              <span>Nov</span>
+                              <span>14</span>
+                              <span>2024</span>
+                            </div>
+                            <div class="event-content">
+                              <div class="event-title">Local Arts & Crafts Expo</div>
+                            </div>
+                          </div>
+                          <br>
+            
+                          <div class="event">
+                            <div class="event-date">
+                              <span>Nov</span>
+                              <span>14</span>
+                              <span>2024</span>
+                            </div>
+                            <div class="event-content">
+                              <div class="event-title">Youth Drug Awareness Summit 2024</div>
+                            </div>
+                          </div>
+                          <br>
+            
+            
+                          <div class="event">
+                            <div class="event-date">
+                              <span>Nov</span>
+                              <span>15</span>
+                              <span>2024</span>
+                            </div>
+                            <div class="event-content">
+                              <div class="event-title">Youth Empowerment Summit 2024</div>
+                            </div>
+                          </div>
+                          <br>
+            
+            
+            
+                          <div class="event">
+                            <div class="event-date">
+                              <span>Nov</span>
+                              <span>15</span>
+                              <span>2024</span>
+                            </div>
+                            <div class="event-content">
+                              <div class="event-title">Youth Empowerment Summit 2024</div>
+                            </div>
+                          </div>
+                          <br>
+            
+            
+                          <div class="event">
+                            <div class="event-date">
+                              <span>Nov</span>
+                              <span>15</span>
+                              <span>2024</span>
+                            </div>
+                            <div class="event-content">
+                              <div class="event-title">Youth Empowerment Summit 2024</div>
+                            </div>
+                          </div>
+                          <br>
+            
+            
+                        </div>
+                    </div>
+                </div>
+                </article>
         </div>
     </nav>
+
+    <script src="newsfeed.js"></script>
 </body>
 </html>
+
