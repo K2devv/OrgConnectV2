@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -52,7 +53,7 @@
                 <img src="images/earth-15-svgrepo-com.svg" class="moon" alt="SVG Icon">
             </label>
 
-            <button class="icon-btn logout-icon">
+            <button class="icon-btn logout-icon" id="logout-icon">
                 <i class="fa-solid fa-arrow-right-from-bracket" style="color: #ffffff;"></i>
             </button>
         </div>
@@ -163,5 +164,17 @@
             </div>
         </div>
     </div>
+
+    <div id="lock-overlay" style="display: none;">
+        <div class="lock-content">
+          <img src="images/lock-icon.png" alt="Lock Icon" class="lock-icon">
+          <h2>Access Restricted</h2>
+          <p>Sign in to gain access to this content. Guest accounts have limited access.</p>
+          <button id="login-button" onclick="redirectToLogin()">Log In</button>
+        </div>
+      </div>
+      
 </body>
+
+<script src="guestlock.js"></script>
 </html>
