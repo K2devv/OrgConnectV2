@@ -34,37 +34,15 @@
             Students can easily access organization info, while admins manage content to keep the community engaged and dynamic.</p>
             
             <div class="button">
-              <!-- Log In Button -->
-              <form action="loginpageV2.php" method="POST" style="display: inline;">
-                  <input type="hidden" name="role" value="user">
-                  <button type="submit" class="btn-primary">Log In</button>
-              </form>
-          
-              <!-- Log In as Guest Button -->
-              <form action="loginpageV2.php" method="POST" style="display: inline;">
-                  <input type="hidden" name="role" value="guest">
-                  <button type="submit" class="btn-secondary">Log In as Guest</button>
-              </form>
-          
-              <!-- Log in as Org Admin Button -->
-              <form action="loginpageV2.php" method="POST" style="display: inline;">
-                  <input type="hidden" name="role" value="orgAdmin">
-                  <button type="submit" class="btn-tertiary">Log In as Org Admin</button>
-              </form>
-            </div>
+              <a href="" class="btn-primary">Log In</a>
+              <a href="" class="btn-secondary">Log In as Guest</a>
+              <a href="" class="btn-tertiary">Log in as Org admin</a>
+          </div>
         </div>
     </div>
 
           
-    <div id="lock-overlay" style="display: none;">
-        <div class="lock-content">
-          <img src="images/lock-icon.png" alt="Lock Icon" class="lock-icon">
-          <h2>Sign In Required</h2>
-          <p>Sign in to view full access to OrgConnect. Where you can explore detailed content, connect with organizations, and discover events on your campus.</p>
-          <button id="login-button" onclick="redirectToLogin()">Log In</button>
-        </div>
-      </div>
-      
+    
 </body>
 
 <script src="landingpage.js"></script>

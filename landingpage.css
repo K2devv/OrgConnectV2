@@ -65,7 +65,7 @@ text-decoration: none;
 }
 
 .btn-secondary{
-background: linear-gradient(90deg, #a159ff,#3b1b74);
+background: linear-gradient(90deg, #832eff,#fe4ff2);
 padding-top:10px ;
 padding-bottom: 10px;
 width: 250px;
@@ -78,7 +78,7 @@ text-decoration: none;
 }
 
 .btn-tertiary{
-background: linear-gradient(90deg, #3b1b74,#a159ff);
+background: linear-gradient(90deg, #832eff,#fe4ff2);
 padding-top:10px ;
 padding-bottom: 10px;
 border-radius: 30px;
