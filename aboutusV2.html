@@ -49,8 +49,6 @@
 
             <input type="checkbox" class="icon-btn darkmode-toggle"  id="darkmode-toggle">
             <label for="darkmode-toggle">
-                <img src="images/earth-15-svgrepo-com.svg" class="sun" alt="SVG Icon">
-                <img src="images/earth-15-svgrepo-com.svg" class="moon" alt="SVG Icon">
             </label>
 
             <button class="icon-btn logout-icon">
@@ -68,11 +66,17 @@
     </div>
 
     <!-- Modal -->
-<div id="restrictionModal" class="modal">
-    <div class="modal-content">
-        <h2>SIGN IN REQUIRED</h2>
-        <p>Sign in to view full access to OrgConnect.</p>
-        <button id="modalCloseBtn" class="close-btn">Close</button>
+
+<div class="overlay" id="restrictionModal">
+    <div class="guestlock-container">
+    <div class="guestlock-icon">
+        <img src="images/guestlock.png" alt="Lock Icon">
+    </div>
+    <div class="guestlock-content">
+        <h1>SIGN IN REQUIRED</h1>
+        <p>Sign in to view full access to OrgConnect. Where you can explore detailed content, connect with organizations, and discover events on your campus.</p>
+        <a href="#"><button id="modalCloseBtn" class="btn">LOG IN</button></a>
+    </div>
     </div>
 </div>
 
@@ -84,8 +88,8 @@
                   <img src="images/orgs.png" alt="SDLO Logo">
               </div>
               <div class="header-text">
-                  <h1>STUDENT DEVELOPMENT AND LEADERSHIP ORGANIZATION</h1>
-                  <h2>( S D L O )</h2>
+                  <h1 id="text-content">STUDENT DEVELOPMENT AND LEADERSHIP ORGANIZATION</h1>
+                  <h2 id="text-content">( S D L O )</h2>
 
               </div>
           </div>
@@ -94,7 +98,7 @@
 
               <div class="description">
                 <h3>ORG DESCRIPTION</h3>
-                <p>
+                <p id="text-content">
                     The Student Development and Leadership Organization (SDLO) is a dynamic and inclusive 
                     student-driven group dedicated to empowering individuals through the development of 
                     leadership skills, personal growth, and active community involvement. SDLO offers a 
@@ -102,7 +106,7 @@
                     providing numerous opportunities for engagement in extracurricular activities, 
                     workshops, and projects that foster both professional and personal growth.
                 </p>
-                <p>
+                <p id="text-content">
                     By encouraging participation in a wide range of events, the organization helps students 
                     cultivate critical thinking, teamwork, and communication skills while also promoting a 
                     strong sense of social responsibility. Through collaboration, networking, and hands-on 
@@ -114,22 +118,22 @@
             </div>
             <!---->
             <div class="contactus">
-                <h1>CONTACT US</h1>
-                <p>VIA EMAIL</p>
-                <h3>
+                <h1 id="text-content">CONTACT US</h1>
+                <p id="text-content">VIA EMAIL</p>
+                <h3 id="text-content">
                     <i class="fa fa-envelope" aria-hidden="true"></i>
                     sldo@university.edu
                 </h3>
-                <p>VIA FACEBOOK</p>
-                <h3>
+                <p id="text-content">VIA FACEBOOK</p>
+                <h3 id="text-content">
                     <i class="fa fa-facebook" aria-hidden="true"></i>
                     www.facebook.com/SLDO.University
                 </h3>
-                <h1>or<br> 
+                <h1 id="text-content">or<br> 
                     Visit Us at the Office</h1>
-                    <p>SLDO - Student Leadership and Development Office</p>
-                    <H3>Building A, Room 102</H3>
-                    <H3>Monday - Friday, 9 AM - 5 PM</H3>
+                    <p id="text-content">SLDO - Student Leadership and Development Office</p>
+                    <H3 id="text-content">Building A, Room 102</H3>
+                    <H3 id="text-content">Monday - Friday, 9 AM - 5 PM</H3>
             </div>
             <!---->
           </div>
