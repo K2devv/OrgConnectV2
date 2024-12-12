@@ -4,18 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="darkmodebtn.css">
-    <title>Document</title>
+    <title>Dark Mode Toggle</title>
 </head>
 <body>
-    <input type="checkbox"  id="darkmode-toggle">
-    <label for="darkmode-toggle">
-        <img src="images/earth-15-svgrepo-com.svg" class="sun" alt="SVG Icon">
-        <img src="images/earth-15-svgrepo-com.svg" class="moon" alt="SVG Icon">
-    </label>
+    <input type="checkbox" id="darkmode-toggle">
+    <label for="darkmode-toggle"></label>
 
     <div class="background">
-
+        <div class="content">
+            <h1 id="text-content">Welcome to Dark Mode Toggle</h1>
+            <p id="description">This text changes based on the dark mode toggle.</p>
+        </div>
     </div>
-    
+
 </body>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const toggle = document.getElementById('darkmode-toggle');
+    
+        toggle.addEventListener('change', () => {
+            document.body.classList.toggle('dark-mode');
+        });
+    });
+    
+</script>
 </html>

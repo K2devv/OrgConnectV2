@@ -24,3 +24,12 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
+// dark mode
+document.addEventListener('DOMContentLoaded', () => {
+    const toggle = document.getElementById('darkmode-toggle');
+
+    toggle.addEventListener('change', () => {
+        document.body.classList.toggle('dark-mode');
+    });
+});
