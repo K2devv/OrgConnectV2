@@ -110,6 +110,7 @@ body {
   color: #9632fe;
 }
 
+
 .container{
   position: absolute;
   left: 15%;
@@ -126,6 +127,7 @@ body {
   height: 500px;
   bottom: 50px;
   left: 5%;
+
 }
 
 .card {
@@ -150,7 +152,6 @@ background-color:#ffffff1b;
 bottom: 10px;
 padding-left: 50px;
 padding-right: 50px;
-
 border-radius: 15px;
 }
 
@@ -468,12 +469,19 @@ padding-left: 15px;
   left: 0;
   right: 0;
   bottom: 0;
-  display: flex;
+  display: none;
+  opacity: 0;
   justify-content: center;
   align-items: center;
-  z-index: 1000;
+  z-index: 9999;
   background: rgba(60, 27, 116, 0.3); /* Semi-transparent background */
   backdrop-filter: blur(10px); /* Apply blur effect */
+  transition: opacity 0.3s ease-in-out;
+}
+
+.overlay.show{
+  display: flex;
+  opacity: 1;
 }
 
 .guestlock-container{
@@ -484,6 +492,8 @@ padding-left: 15px;
   justify-content: center;
   align-items: center;
   margin-bottom: 50px;
+  animation: fadeIn 0.3s ease-in-out;
+  
 }
 
 .guestlock-content {
@@ -496,6 +506,7 @@ padding-left: 15px;
   width: 80%;
   height: 42%;
   filter: drop-shadow(0px 4px 10px #a135ff91);
+  animation: fadeIn 0.3s ease-in-out;
 }
 .guestlock-content h1 {
   font-size: 2.5rem;
@@ -573,6 +584,39 @@ body.dark-mode p{
 body.dark-mode .logo {
   border: 15px solid #f4bbf2;
 }
+
+body.dark-mode .card{
+  background-color: #1c0f32;
+}
+
+body.dark-mode .description{
+  background-color: #1c0f32;
+}
+
+body.dark-mode .sidebar .a{
+  color: white;
+}
+
+body.dark-mode .sidebar .a:hover{
+  border-right: #a135ff 5px solid;
+  color: #9632fe;
+}
+
+body.dark-mode .contactus{
+  background-color: #1c0f32;
+}
+
+body.dark-mode .visit,
+body.dark-mode .contact{
+  color: #f4bbf2;
+}
+
+body.dark-mode .guestlock-content{
+  background: linear-gradient(#0d0423, #4b3161, #301871);
+}
+
+body.dark-mode .guestlock-content h1{
+  color: #f4bbf2;}
 
 @keyframes fadeIn {
   from {

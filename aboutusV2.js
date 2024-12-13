@@ -1,29 +1,34 @@
-document.addEventListener('DOMContentLoaded', () => {
-    // Get restricted links
-    const restrictedLinks = document.querySelectorAll('.restricted');
-    const modal = document.getElementById('restrictionModal');
-    const modalCloseBtn = document.getElementById('modalCloseBtn');
+// Select modal and its elements
+const restrictionModal = document.getElementById("restrictionModal");
+const modalCloseBtn = document.getElementById("modalCloseBtn");
 
-    // Show modal when a restricted link is clicked
-    restrictedLinks.forEach(link => {
-        link.addEventListener('click', (e) => {
-            e.preventDefault(); // Prevent navigation
-            modal.style.display = 'flex';
-        });
-    });
+// Select all restricted sidebar links
+const restrictedLinks = document.querySelectorAll(".sidebar .restricted");
 
-    // Close modal when the close button is clicked
-    modalCloseBtn.addEventListener('click', () => {
-        modal.style.display = 'none';
-    });
+// Initially ensure modal is hidden
+restrictionModal.classList.remove("show");
 
-    // Close modal when clicking outside the modal content
-    window.addEventListener('click', (e) => {
-        if (e.target === modal) {
-            modal.style.display = 'none';
-        }
-    });
+// Add click event listener for each restricted link
+restrictedLinks.forEach((link) => {
+  link.addEventListener("click", (event) => {
+    event.preventDefault(); // Prevent navigation to restricted page
+    restrictionModal.classList.add("show"); // Show the modal
+  });
 });
+
+// Close the modal when the close button is clicked
+modalCloseBtn.addEventListener("click", () => {
+  restrictionModal.classList.remove("show"); // Hide the modal
+});
+
+// Close the modal when clicking outside the modal content
+restrictionModal.addEventListener("click", (event) => {
+  if (event.target === restrictionModal) {
+    restrictionModal.classList.remove("show"); // Hide the modal
+  }
+});
+
+
 
 
 // dark mode
