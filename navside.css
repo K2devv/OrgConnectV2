@@ -1,0 +1,359 @@
+/* Reset */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url(images/newbg.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+  
+  /* Navbar Styling */
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    
+  }
+  
+  /* Logo Section */
+  .nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .nav-logo img {
+    height: 70px;
+    margin-left: 50px;
+  }
+  
+  
+  /* Buttons */
+  
+  
+ /* Icons */
+ .nav-links {
+    display: flex;
+    gap: 1rem;
+    margin-right: 80rem;
+    position: relative;
+  }
+  
+  .icon-btn {
+    background-color: #682fff;
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    margin-top: 2px;
+  }
+  
+  .logout-icon {
+    background-color: #f65555;
+    position: absolute;
+    left: 300px;
+    
+  }
+  
+  .nav-links .icon-btn:hover {
+    background-color: #ffbd59;
+    transform: scale(1.1);
+    box-shadow: 0px 4px 20px #a149d4;
+  }
+  
+  
+  
+.nav-links .logout-icon:hover {
+    background-color: #f65555;
+    transform: scale(1.1);
+    box-shadow: 0px 4px 20px #a149d4;   
+  }
+
+.nav-links .notif-icon.clicked{
+  background-color: #ffbd59;
+}
+  
+  
+  
+  .sidebar {
+    margin: -10px;
+    padding: 0;
+    width: 15%;
+    background-color: transparent;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+  }
+  
+  
+  .sidebar a {
+    display: block;
+    color: black;
+    text-decoration: none;
+    font-size: large;
+    margin-top: 25px;
+    padding-top: 5px;
+    padding-left: 55px;
+  }
+  
+  .image{
+    width: 175px;
+    height: 80px;
+    left: auto;
+    right: auto;
+  }
+  
+  /* Links on mouse-over */
+  .sidebar .a:hover {
+    border-right: #a135ff 5px solid;
+    color: #9632fe;
+  }
+
+
+   /* dark mode button */
+
+
+   .darkmode-label {
+    width: 80px;  /* Increased width */
+    height: 30px; /* Increased height */
+    position: relative;
+    display: block;
+    background: linear-gradient(90deg, #ffbd59, #df8e14, #9d530f);
+    border-radius: 200px;
+    box-shadow: inset 0px 5px 15px rgba(0,0,0,0.4), inset 0px -5px 15px rgba(255,255,255,0.4);
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 3px;
+    right: 20px;
+    margin-right: -20px;
+  }
+  
+  .darkmode-label::after {
+    content: "";
+    width: 25px;  /* Adjusted for circle size */
+    height: 25px; /* Adjusted for circle size */
+    position: absolute;
+    top: 2.5px;   /* Centered vertically */
+    left: 2.5px;  /* Initial position */
+    background: #fff;
+    border-radius: 50%;  /* Made perfectly round */
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.2);
+    transition: 0.3s;
+  }
+  
+  /* ... existing input styling ... */
+  
+  .darkmode-toggle:checked + .darkmode-label{
+    background: linear-gradient(90deg, #3b1b74, #a159ff);
+  }
+  
+  .darkmode-toggle:checked + .darkmode-label::after {
+    left: calc(100% - 2.5px);  /* Fixed position when checked */
+    transform: translateX(-100%);
+    background: #fff;
+  }
+  
+  .darkmode-label:active::after {
+    width: 35px;  /* Adjusted active state width */
+  }
+  
+  #darkmode-toggle{
+    width: 0;
+    height: 0;
+    visibility: hidden;
+  }
+  
+  /* Fixed icon positioning */
+  .darkmode-label img {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    top: 7px;  /* Centered vertically */
+    left: 7px;
+    transition: 0.3s;
+    z-index: 2;
+  }
+  
+  .darkmode-toggle{
+    width: 0;
+    height: 0;
+    visibility: hidden;
+  }
+
+
+
+
+
+
+/*dark mode trigger*/
+body.dark-mode  {
+    background-image: url('images/AUdark.png'); /* Update this path with the actual image path */
+    background-size: cover;
+    transition: background-image 0.3s ease-in-out;
+    background-position: center;
+  }
+  
+  body.dark-mode h1,
+  body.dark-mode h2{
+    color: #ffffff;
+  }
+  
+  body.dark-mode h3{
+    color: #f4bbf2;
+  
+  }
+  
+  body.dark-mode p{
+    color: #ffffff; /* Change the text color to white or any other color suitable for dark mode */
+  }
+  
+  body.dark-mode .logo {
+    border: 15px solid #f4bbf2;
+  }
+  
+  body.dark-mode .card{
+    background-color: #1c0f32;
+  }
+  
+  body.dark-mode .description{
+    background-color: #1c0f32;
+  }
+  
+  body.dark-mode .sidebar .a{
+    color: white;
+  }
+  
+  body.dark-mode .sidebar .a:hover{
+    border-right: #a135ff 5px solid;
+    color: #9632fe;
+  }
+  
+  body.dark-mode .contactus{
+    background-color: #1c0f32;
+  }
+  
+  body.dark-mode .visit,
+  body.dark-mode .contact{
+    color: #f4bbf2;
+  }
+  
+  body.dark-mode .guestlock-content{
+    background: linear-gradient(#0d0423, #4b3161, #301871);
+  }
+  
+  body.dark-mode .guestlock-content h1{
+    color: #f4bbf2;}
+  
+  @keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+  }
+
+  /* Yellow color when clicked */
+.notification-btn.clicked {
+    background-color: #ffbd59; /* Yellow color */
+  }
+  
+  /* Notification Popup Styles */
+  .notification-popup {
+    position: fixed;
+    top: 80px; /* Adjust this value to position the popup */
+    right: 20px;
+    width: 300px;
+    background: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(100%);
+    transition: transform 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 1000;
+  }
+  
+  /* Show the popup when active */
+  .notification-popup.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+  }
+  
+  /* Header Styles */
+  .popup-header {
+    background: #682fff;
+    color: white;
+    padding: 15px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  /* Content and Notification Styles */
+  .popup-content {
+    padding: 10px;
+    max-height: 300px;
+    overflow-y: auto;
+  }
+  
+  .notif-item {
+    background: linear-gradient(90deg,#f1effc,#cbd1f3,#ceb7d0);
+    padding: 10px;
+    border-bottom: 1px solid #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    border-radius: 15px;
+  }
+  
+  .notif-item:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .notif-item .date {
+    color: #6a1b9a;
+    font-weight: bold;
+    font-size: 14px;
+  }
+  
+  .notif-item .event {
+    color: #555;
+    font-size: 14px;
+  }
+  
+  .gradient-line {
+    width: 80%;
+    max-width: 250px;
+    height: 8px;
+    background: linear-gradient(90deg, #832eff, #fe4ff2);
+    margin: 0 auto;
+    border-radius: 50px;
+    position: relative;
+    top: 12px;
+  
+  }
+    
+  
+    
+    @keyframes fadeIn {
+      from {
+          opacity: 0;
+          transform: scale(0.9);
+      }
+      to {
+          opacity: 1;
+          transform: scale(1);
+      }
+    }
+    

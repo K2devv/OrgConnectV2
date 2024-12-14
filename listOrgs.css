@@ -162,7 +162,7 @@ body {
 }
 
 /* Darkmode Button */
-label {
+.darkmode-label {
   width: 80px;  /* Increased width */
   height: 30px; /* Increased height */
   position: relative;
@@ -177,7 +177,7 @@ label {
   margin-right: -20px;
 }
 
-label::after {
+.darkmode-label::after {
   content: "";
   width: 25px;  /* Adjusted for circle size */
   height: 25px; /* Adjusted for circle size */
@@ -192,35 +192,28 @@ label::after {
 
 /* ... existing input styling ... */
 
-input:checked + label{
+.darkmode-toggle:checked + .darkmode-label{
   background: linear-gradient(90deg, #3b1b74, #a159ff);
 }
 
-input:checked + label::after {
+.darkmode-toggle:checked + .darkmode-label::after {
   left: calc(100% - 2.5px);  /* Fixed position when checked */
   transform: translateX(-100%);
   background: #fff;
 }
 
-
-input:checked + label img{
-  opacity: 0;
-}
-
-input:checked + label img.sun{
-  opacity: 0;
-}
-
-input:checked + label img.moon{
-  opacity: 1;
-}
-
-label:active::after {
+.darkmode-label:active::after {
   width: 35px;  /* Adjusted active state width */
 }
 
+#darkmode-toggle{
+  width: 0;
+  height: 0;
+  visibility: hidden;
+}
+
 /* Fixed icon positioning */
-label img {
+.darkmode-label img {
   position: absolute;
   width: 15px;
   height: 15px;
@@ -228,16 +221,6 @@ label img {
   left: 7px;
   transition: 0.3s;
   z-index: 2;
-}
-
-label img.sun {
-  left: 7.5px;
-  opacity: 1;
-}
-
-label img.moon {
-  right: 7.5px;
-  opacity: 0;
 }
 
 .darkmode-toggle{
@@ -342,7 +325,7 @@ flex-shrink: 0; /* Prevent shrinking */
 position: relative; /* Required for absolute positioning of input */
 }
 
-.checkbox-label  {
+.checkbox-input  {
 position: absolute;
 opacity: 0;
 cursor: pointer;
@@ -350,7 +333,7 @@ height: 0;
 width: 0;
 }
 
-.checkbox-follow {
+.checkbox-label {
 display: block;
 width: 100%;
 height: 100%;
@@ -359,28 +342,29 @@ position: relative;
 display: flex;
 justify-content: center;
 align-items: center;
+color: white;
 }
 
-.checkbox-follow i {
+.checkbox-label i {
 position: absolute;
 transition: opacity 0.3s ease;
 }
 
-.checkbox-follow i.check-icon[data-checked] {
+.checkbox-label i[data-checked] {
 opacity: 0;
 color: white;
 }
 
-.checkbox-follow i.heart-icon[data-unchecked] {
+.checkbox-follow i[data-unchecked] {
 opacity: 1;
 color: white;
 }
 
-.checkbox-label:checked + .checkbox-follow i.heart-icon[data-unchecked] {
+.checkbox-input:checked + .checkbox-label i[data-unchecked] {
 opacity: 0;
 }
 
-.checkbox-label:checked + .checkbox-follow i.check-icon[data-checked] {
+.checkbox-input:checked + .checkbox-label i[data-checked] {
 opacity: 1;
 }
 

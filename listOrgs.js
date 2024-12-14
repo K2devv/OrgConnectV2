@@ -74,3 +74,4 @@ searchInput.addEventListener('input', function(e) {
         noResultsMsg.style.display = 'none';
     }
 });
+
