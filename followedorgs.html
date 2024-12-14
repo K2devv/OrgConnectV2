@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="followedorgs.css">
+    
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet"
+  />
+  <link href="https://db.onlinewebfonts.com/c/83e4a6b639612cd501853be5a7cf97ab?family=Trend+Sans+One+Regular" rel="stylesheet">
+  <link href="https://fonts.cdnfonts.com/css/proxima-nova-condensed" rel="stylesheet">
+  <link href="https://fonts.cdnfonts.com/css/dm-sans" rel="stylesheet">
+</head>
+
+<body>
+
+    <nav class="navbar">
+
+        <div class="nav-logo">
+            <img src="images/longlogo.png" alt="Org Connect Logo">
+        </div>
+            
+        <div class="nav-links">
+  
+            <button class="icon-btn home-icon">
+                <i class="fa-solid fa-house" style="color: #ffffff;"></i>
+            </button>
+            <button class="icon-btn user-icon">
+                <i class="fa-solid fa-user" style="color: #ffffff;"></i>
+            </button>
+            <button class="icon-btn follow-icon">
+                <i class="fa-solid fa-heart" style="color: #ffffff;"></i>
+            </button>
+            
+            <div class="notification-container">
+                <button class="icon-btn notif-icon" id="notif-btn">
+                    <i class="fa-solid fa-bell" style="color: #ffffff;"></i>
+                </button>
+                <div class="notification-popup" id="notif-popup">
+                    <div class="popup-header">
+                      <i class="fa fa-calendar"></i>
+                        <h3>WEEKLY EVENTS</h3>
+                    </div>
+                    <div class="popup-content">
+        
+                        <div class="notif-item" onclick="window.location.href='aboutusV2.html'">
+                            <span class="date">NOV 11</span>
+                            <span class="event">Tech Innovators Conference 2024</span>
+                            <div class="gradient-line"></div>
+                        </div>
+                        <div class="notif-item">
+                            <span class="date">NOV 12</span>
+                            <span class="event">Sustainability Workshop for Students</span>
+                            <div class="gradient-line"></div>
+                        </div>
+                        <div class="notif-item">
+                            <span class="date">NOV 13</span>
+                            <span class="event">Leadership Development Forum</span>
+                            <div class="gradient-line"></div>
+                        </div>
+        
+                        <div class="notif-item">
+                          <span class="date">NOV 14</span>
+                          <span class="event">Leadership Development Forum</span>
+                          <div class="gradient-line"></div>
+                        </div>
+        
+                      <div class="notif-item">
+                        <span class="date">NOV 15</span>
+                        <span class="event">Leadership Development Forum</span>
+                        <div class="gradient-line"></div>
+                      </div>
+        
+                    </div>
+                </div>
+            </div>
+
+            <input type="checkbox" class="icon-btn darkmode-toggle"  id="darkmode-toggle">
+            <label for="darkmode-toggle" class="darkmode-label">
+            </label>
+
+            <button class="icon-btn logout-icon">
+                <i class="fa-solid fa-arrow-right-from-bracket" style="color: #ffffff;"></i>
+            </button>
+        </div>
+    </nav>
+    
+    <!-- Start of Body -->
+
+
+    <div class="comtext">
+        <h1>Followed Orgs</h1>
+            <p>Most Recent</p>
+    </div>
+
+    <div class="flexer">
+        <div class="container">
+            <!---->
+            <div class="organization-container">
+                <!-- Checkbox -->
+                <div class="checkbox-div">
+                    <input type="checkbox" class="checkbox-input" id="org1">
+                    <label for="org1" class="checkbox-label">
+                        <i class="fa fa-heart fa-2x" aria-hidden="true" data-unchecked></i>
+                        <i class="fa fa-check-circle fa-3x" aria-hidden="true" data-checked></i>
+                    </label>
+                </div>
+                
+                <!-- Organization Logo -->
+                <img src="images/orgs.png" alt="Organization Logo" class="organization-logo">
+                <!-- Organization Content (Text) -->
+                <div class="organization-content">
+                    <div class="organization-name"><a href="#" class="out">Student Development and Leadership Organization</a></div>
+                </div>
+            </div>
+
+            <div class="organization-container">
+                <!-- Checkbox -->
+                <div class="checkbox-div">
+                    <input type="checkbox" class="checkbox-input" id="org2">
+                    <label for="org2" class="checkbox-label">
+                        <i class="fa fa-heart fa-2x" aria-hidden="true" data-unchecked></i>
+                        <i class="fa fa-check-circle fa-3x" aria-hidden="true" data-checked></i>
+                    </label>
+                </div>
+                
+                <!-- Organization Logo -->
+                <img src="images/orgs.png" alt="Organization Logo" class="organization-logo">
+                <!-- Organization Content (Text) -->
+                <div class="organization-content">
+                    <div class="organization-name"><a href="#" class="out">Student Development and Leadership Organization</a></div>
+                </div>
+            </div>
+
+            <div class="organization-container">
+                <!-- Checkbox -->
+                <div class="checkbox-div">
+                    <input type="checkbox" class="checkbox-input" id="org3">
+                    <label for="org3" class="checkbox-label">
+                        <i class="fa fa-heart fa-2x" aria-hidden="true" data-unchecked></i>
+                        <i class="fa fa-check-circle fa-3x" aria-hidden="true" data-checked></i>
+                    </label>
+                </div>
+                
+                <!-- Organization Logo -->
+                <img src="images/orgs.png" alt="Organization Logo" class="organization-logo">
+                <!-- Organization Content (Text) -->
+                <div class="organization-content">
+                    <div class="organization-name"><a href="#" class="out">Student Development and Leadership Organization</a></div>
+                </div>
+            </div>
+
+            
+
+
+        </div>
+    </div>
+
+                  
+</body>
+
+<script src="followedorgs.js"></script>
+</html>

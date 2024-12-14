@@ -1,0 +1,406 @@
+/* Reset */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url(images/newbg.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+  
+  /* Navbar Styling */
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    
+  }
+  
+  /* Logo Section */
+  .nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .nav-logo img {
+    height: 70px;
+    margin-left: 50px;
+  }
+  
+  
+  /* Buttons */
+  
+  
+  /* Icons */
+  .nav-links {
+    display: flex;
+    gap: 1rem;
+    margin-right: 80rem;
+    position: relative;
+  }
+  
+  .icon-btn {
+    background-color: #682fff;
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    margin-top: 2px;
+  }
+  
+  .logout-icon {
+    background-color: #f65555;
+    position: absolute;
+    left: 300px;
+    
+  }
+  
+  .nav-links .icon-btn:hover {
+    background-color: #ffbd59;
+    transform: scale(1.1);
+    box-shadow: 0px 4px 20px #a149d4;
+  }
+  
+  
+  
+.nav-links .logout-icon:hover {
+    background-color: #f65555;
+    transform: scale(1.1);
+    box-shadow: 0px 4px 20px #a149d4;   
+  }
+
+.nav-links .notif-icon.clicked{
+  background-color: #ffbd59;
+}
+  
+  /* Darkmode Button */
+  .darkmode-label {
+    width: 80px;  /* Increased width */
+    height: 30px; /* Increased height */
+    position: relative;
+    display: block;
+    background: linear-gradient(90deg, #ffbd59, #df8e14, #9d530f);
+    border-radius: 200px;
+    box-shadow: inset 0px 5px 15px rgba(0,0,0,0.4), inset 0px -5px 15px rgba(255,255,255,0.4);
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 6px;
+    right: 20px;
+  }
+  
+  .darkmode-label::after {
+    content: "";
+    width: 25px;  /* Adjusted for circle size */
+    height: 25px; /* Adjusted for circle size */
+    position: absolute;
+    top: 2.5px;   /* Centered vertically */
+    left: 2.5px;  /* Initial position */
+    background: #fff;
+    border-radius: 50%;  /* Made perfectly round */
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.2);
+    transition: 0.3s;
+  }
+  
+  /* ... existing input styling ... */
+  
+  .darkmode-toggle:checked + .darkmode-label{
+    background: linear-gradient(90deg, #3b1b74, #a159ff);
+  }
+  
+  .darkmode-toggle:checked + .darkmode-label::after {
+    left: calc(100% - 2.5px);  /* Fixed position when checked */
+    transform: translateX(-100%);
+    background: #fff;
+  }
+  
+  
+  .darkmode-label:active::after {
+    width: 35px;  /* Adjusted active state width */
+  }
+  
+  
+  .darkmode-toggle{
+    width: 0;
+    height: 0;
+    visibility: hidden;
+  }
+  
+  
+  /*dark mode*/
+  
+  body.dark-mode  {
+    background-image: url('images/AUdark.png'); /* Update this path with the actual image path */
+    background-size: cover;
+    transition: background-image 0.3s ease-in-out;
+    background-position: center;
+  }
+
+  body.dark-mode .container{
+    background-color: #4d258d41;
+  }
+
+
+  * Button Styles */
+.notif-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 100;
+}
+
+.notification-btn {
+  background-color: #682fff;
+  color: white;
+  padding: 10px 20px;
+  font-size: 14px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+
+
+/* Yellow color when clicked */
+.notification-btn.clicked {
+  background-color: #ffbd59; /* Yellow color */
+}
+
+/* Notification Popup Styles */
+.notification-popup {
+  position: fixed;
+  top: 80px; /* Adjust this value to position the popup */
+  right: 20px;
+  width: 300px;
+  background: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(100%);
+  transition: transform 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 1000;
+}
+
+/* Show the popup when active */
+.notification-popup.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+}
+
+/* Header Styles */
+.popup-header {
+  background: #682fff;
+  color: white;
+  padding: 15px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Content and Notification Styles */
+.popup-content {
+  padding: 10px;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.notif-item {
+  background: linear-gradient(90deg,#f1effc,#cbd1f3,#ceb7d0);
+  padding: 10px;
+  border-bottom: 1px solid #f0f0f0;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  border-radius: 15px;
+}
+
+.notif-item:hover {
+  background-color: #f1f1f1;
+}
+
+.notif-item .date {
+  color: #6a1b9a;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.notif-item .event {
+  color: #555;
+  font-size: 14px;
+}
+
+.gradient-line {
+  width: 80%;
+  max-width: 250px;
+  height: 8px;
+  background: linear-gradient(90deg, #832eff, #fe4ff2);
+  margin: 0 auto;
+  border-radius: 50px;
+  position: relative;
+  top: 12px;
+
+}
+  
+
+  
+  @keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+  }
+  
+  
+  .flexer{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+  }
+
+.comtext{
+    position: absolute;
+    left: 13%;
+    top: 11%;
+    font-weight:bold;
+    text-transform: uppercase;
+    color: #462284;
+  }
+
+.comtext h1{
+  font-size: 2rem;
+}
+
+.container{
+    position: absolute;
+    width: 80%;
+    min-height: 650px;
+    max-height: fit-content;
+    left: 12%;
+    top: 25%;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.249);
+    border-radius: 50px;
+    overflow: scroll;
+    scrollbar-color: none;
+    
+}
+
+.organization-container {
+    display: flex;
+    align-items: center;
+    background: rgb(255, 255, 255); /* Gradient background */
+    border-radius: 20px;
+    padding: 8px;
+    margin-left: 5%;
+    margin-top: 7.2%;
+    width: 90%; /* Fixed width of the container */
+    height: 50px;
+    
+}
+
+.checkbox-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(90deg, rgba(161, 89, 255, 1) 20%, rgba(59, 27, 116, 1) 100%); /* Purple color */
+  border-radius: 15px;
+  padding: 10px;
+  padding-right: 30px;
+  margin-left: -10px;
+  margin-right: -40px;
+  height: 60px;
+  width: 90px;
+  flex-shrink: 0; /* Prevent shrinking */
+  position: relative; /* Required for absolute positioning of input */
+}
+
+.checkbox-input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkbox-label {
+  display: block;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.checkbox-label i {
+  position: absolute;
+  transition: opacity 0.3s ease;
+}
+
+.checkbox-label i[data-checked] {
+  opacity: 0;
+  color: white;
+}
+
+.checkbox-label i[data-unchecked] {
+  opacity: 1;
+  color: white;
+}
+
+.checkbox-input:checked + .checkbox-label i[data-unchecked] {
+  opacity: 0;
+}
+
+.checkbox-input:checked + .checkbox-label i[data-checked] {
+  opacity: 1;
+}
+
+
+
+
+.organization-logo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    padding: 10px;
+    margin-right: 15px;
+    flex-shrink: 0; /* Prevent shrinking */
+    z-index: 1;
+}
+
+.organization-content {
+    padding: 10px 15px;
+    border-radius: 15px;
+    width: 100%; /* Ensures it fills remaining width */
+}
+
+.organization-name {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #4c227b; /* Dark purple color for text */
+    margin: 0;
+    text-align: center;
+    text-transform: uppercase;
+
+}
+
+.out {
+    text-decoration: none;
+    color: #462284;
+}
+  
